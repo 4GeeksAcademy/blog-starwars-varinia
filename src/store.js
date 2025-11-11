@@ -12,7 +12,8 @@ export const initialStore=()=>{
         title: "Do my homework",
         background: null,
       }
-    ]
+    ],
+    character: [],
   }
 }
 
@@ -26,10 +27,11 @@ export default function storeReducer(store, action = {}) {
         ...store,
         todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
       };
-
+///personajes
       case 'get_personajes':
+        const {personajes} = action.payload
         return{
-          ...store, personajes: action.payload
+          ...store, character: personajes
         };
 
     default:
