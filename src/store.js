@@ -1,5 +1,5 @@
-export const initialStore=()=>{
-  return{
+export const initialStore = () => {
+  return {
     message: null,
     todos: [
       {
@@ -14,27 +14,43 @@ export const initialStore=()=>{
       }
     ],
     character: [],
+    galaxy: [],
+    naves: [],
   }
 }
 
 export default function storeReducer(store, action = {}) {
-  switch(action.type){
+  switch (action.type) {
     case 'add_task':
 
-      const { id,  color } = action.payload
+      const { id, color } = action.payload
 
       return {
         ...store,
         todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
       };
-///personajes
-      case 'get_personajes':
-        const {personajes} = action.payload
-        return{
-          ...store, character: personajes
-        };
+
+    case 'get_personajes': {
+      const { personajes } = action.payload
+      return {
+        ...store, character: personajes
+      };
+    }
+
+    case 'get_planets': {
+      const { planets } = action.payload
+      return {
+        ...store, galaxy: planets
+      };
+    }
+    case 'get_starships': {
+      const { starships } = action.payload
+      return {
+        ...store, naves: starships
+      };
+    }
 
     default:
       throw Error('Unknown action.');
-  }    
+  }
 }
