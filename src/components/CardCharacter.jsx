@@ -10,7 +10,7 @@ const { store, dispatch } = useGlobalReducer();
                 <div className="card-body">
                     <h5 className="card-title">Name:{people.name}</h5>
                     <p className="card-text">Born:{people.homeworld}</p>
-                    <Link to={`/personaje/${people.uid}`} className="btn btn-primary">Go somewhere</Link>
+                    <Link to={`/personaje/${people.uid}`} className="btn btn-warning">Learn More</Link>
                     <Link className="btn btn-primary">Fav</Link>
                 </div>
         </div>

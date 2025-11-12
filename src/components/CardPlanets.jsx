@@ -6,11 +6,10 @@ const { store, dispatch } = useGlobalReducer();
 
     return (
         <div className="card" style={{width: "18rem"}}>
-             <img src={`https://starwars-visualguide.com/assets/img/planets/${planets.uid}.jpg`} className="card-img-top" alt="..." />
+             <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/planets/${planets.uid}.jpg`} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Name:{planets.name}</h5>
-                    <p className="card-text">Climate:{planets.climate}</p>
-                    <Link to={`/planets/${planets.uid}`} className="btn btn-primary">Go somewhere</Link>
+                    <Link to={`/planets/${planets.uid}`} className="btn btn-warning">Go somewhere</Link>
                     <Link className="btn btn-primary">Fav</Link>
                 </div>
         </div>

@@ -9,6 +9,7 @@ export const Home = () => {
 
 	const { store, dispatch } = useGlobalReducer();
 	
+	
 	async function character() {
 		const response = await fetch("https://www.swapi.tech/api/people/")
 		const data = await response.json();
@@ -22,7 +23,7 @@ export const Home = () => {
 	}
 
 	async function galaxy() {
-		const response = await fetch("https://swapi.dev/api/planets/")
+		const response = await fetch("https://swapi.tech/api/planets/")
 		const data = await response.json();
 		const allGalaxy = data.results;
 
@@ -33,29 +34,31 @@ export const Home = () => {
 
 	}
 
-	async function Naves() {
-		const response = await fetch("http https://swapi.dev/api/starships/")
+	async function starships() {
+		const response = await fetch("https://swapi.tech/api/starships/")
 		const data = await response.json();
-		const allCharacter = data.results;
+		console.log(data);
+		
+		const allStarships = data.results;
 
 		dispatch({
 			type: "get_naves",
-			payload: { naves: allStarhips }
+			payload: { naves: allStarships }
 		})
 
 	}
 
 	useEffect(() => {
+		console.log(store.starships);
 		character()
 		galaxy()
+		starships()
 	}, []);
-
-
 
 	return (
 		<div className= "text-center mt-5">
-			<h1>Star Wars Blog</h1>
-			<h3>Character</h3>
+			<h1 className="fw-bold">Star Wars Blog</h1>
+			<h3 className="fw-bold">Character</h3>
 			<div id="carouselCharacter" className="carousel slide carousel-fade">
 				<div className="carousel-inner">
 					{store.character.map((value, index) => {
@@ -66,7 +69,7 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<h3>Planets</h3>
+			<h3 className="fw-bold">Planets</h3>
 			<div id="carouselPlanets" className="carousel slide carousel-fade">
 				<div className="carousel-inner">
 					{store.galaxy.map((value, index) => {
@@ -76,14 +79,14 @@ export const Home = () => {
 					})}
 				</div>
 			</div>
-			<h3>Starships</h3>
+			<h3 className="fw-bold">Starships</h3>
 			<div id="carouselStarships" className="carousel slide carousel-fade">
 				<div className="carousel-inner">
-					{store.naves.map((value, index) => {
+					 {store.starships.map((value, index) => {
 						return (
 							<CardNaves key={index} starships={value} />
 						)
-					})}
+					})} 
 				</div>
 			</div>
 		</div>
