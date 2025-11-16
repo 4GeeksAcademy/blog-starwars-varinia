@@ -49,7 +49,6 @@ export const Home = () => {
 	}
 
 	useEffect(() => {
-		console.log(store.starships);
 		character()
 		galaxy()
 		starships()

@@ -1,5 +1,6 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { Link } from "react-router-dom";
+import React, {useState} from "react";
 
 const CardCharacter = ({people}) => {
 const { store, dispatch } = useGlobalReducer();
