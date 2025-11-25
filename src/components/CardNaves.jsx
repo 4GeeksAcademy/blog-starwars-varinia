@@ -10,8 +10,8 @@ console.log(store.naves);
              <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/starships/${starships.uid}.jpg`} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Name:{starships.name}</h5>
-                    <Link to={`/planets/${starships.uid}`} className="btn btn-warning">Go somewhere</Link>
-                    <Link className="btn btn-primary">Fav</Link>
+                    <Link to={`/starships/${starships.uid}`} className="btn btn-warning">Learn More</Link>
+                    <Link className="btn btn-primary">♡</Link>
                 </div>
         </div>
 

@@ -9,8 +9,8 @@ const { store, dispatch } = useGlobalReducer();
              <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/planets/${planets.uid}.jpg`} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Name:{planets.name}</h5>
-                    <Link to={`/planets/${planets.uid}`} className="btn btn-warning">Go somewhere</Link>
-                    <Link className="btn btn-primary">Fav</Link>
+                    <Link to={`/planets/${planets.uid}`} className="btn btn-warning">Learn More</Link>
+                    <Link className="btn btn-primary">♡</Link>
                 </div>
         </div>
 
