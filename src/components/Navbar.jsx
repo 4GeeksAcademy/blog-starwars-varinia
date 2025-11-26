@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+
 
 export const Navbar = () => {
+
+	const { store, dispatch } = useGlobalReducer();
 
 	return (
 		<nav className="navbar bg-dark">
@@ -12,16 +16,22 @@ export const Navbar = () => {
 					</span>
 				</Link>
 				<div className="ml-auto">
-					<li className="nav-item dropdown btn btn-warning">
-						<Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Favorites
-						</Link>
+					<div className="nav-item dropdown btn btn-warning">
+						<button className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+							Favorites ({store.favorites.lenght})
+						</button>
 						<ul className="dropdown-menu">
-							<li><Link className="dropdown-item" href="#">Action</Link></li>
-							<li><Link className="dropdown-item" href="#">Another action</Link></li>
-							<li><Link className="dropdown-item" href="#">Something else here</Link></li>
+							{store.favorites.map((fav, index) => (
+								<li key={index} className="d-flex justify-content-between align-items-center px-3">
+									<span>{fav.name}</span>
+									<button className="btn btn-sm btn-warning" onClick={() => dispatch({
+										type: "remove_favorite", payload: { index }})}
+									><i className="fas fa-trash"></i>
+									</button>
+								</li>
+							))}
 						</ul>
-					</li>
+					</div>
 				</div>
 			</div>
 		</nav>

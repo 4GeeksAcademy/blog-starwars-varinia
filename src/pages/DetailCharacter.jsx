@@ -34,12 +34,12 @@ export const DetailCharacter = () => {
         <div className="card" style={{ width: "540px" }}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/assets/people/${uid}.jpg`} className="card-img-top" alt="..." />
+                    <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/people/${uid}.jpg`} className="card-img-top" alt="..." />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title fw-bold">{character.name}</h5>
-                        <p className="card-text">{character.birth_year}</p>
+                        <p className="card-text">Birth Year:{character.birth_year}</p>
                         <p className="card-text">{character.eye_color}</p>
                         <p className="card-text">{character.gender}</p>
                         <p className="card-text">{character.hair_color}</p>
