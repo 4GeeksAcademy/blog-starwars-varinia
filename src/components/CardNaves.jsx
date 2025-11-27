@@ -26,7 +26,7 @@ const toggleFavorite = () => {
     };
 
     return (
-        <div className="card" style={{width: "18rem"}}>
+        <div className="card mx-1" style={{minWidth: "18rem"}}>
              <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/starships/${starships.uid}.jpg`} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Name:{starships.name}</h5>

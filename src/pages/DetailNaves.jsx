@@ -35,13 +35,13 @@ export const DetailNave = () => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title fw-bold">{nave.name}</h5>
-                        <p className="card-text">{nave.model}</p>
-                        <p className="card-text">{nave.passengers}</p>
-                        <p className="card-text">{nave.consumables}</p>
-                        <p className="card-text">{nave.hyperdrive_rating}</p>
-                        <p className="card-text">{nave.length}</p>
-                        <p className="card-text">{nave.starship_class}</p>
+                        <h5 className="card-title fw-bold fs-2">{nave.name}</h5>
+                        <p className="card-text"><span className="fw-bold">Model: </span>{nave.model}</p>
+                        <p className="card-text"><span className="fw-bold">Passengers: </span>{nave.passengers}</p>
+                        <p className="card-text"><span className="fw-bold">Consumables: </span>{nave.consumables}</p>
+                        <p className="card-text"><span className="fw-bold">Hyperdrive Rating: </span>{nave.hyperdrive_rating}</p>
+                        <p className="card-text"><span className="fw-bold">Lenght: </span>{nave.length}</p>
+                        <p className="card-text"><span className="fw-bold">Starship Class: </span>{nave.starship_class}</p>
                     </div>
                 </div>
             </div>

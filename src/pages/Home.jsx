@@ -58,19 +58,19 @@ export const Home = () => {
 		<div className= "text-center mt-5">
 			<h1 className="fw-bold">Star Wars Blog</h1>
 			<h3 className="fw-bold">Character</h3>
-			<div id="carouselCharacter" className="carousel slide carousel-fade">
-				<div className="carousel-inner">
+			<div className="container py-2 overflow-auto">
+				<div className="d-flex flex-row flex-nowrap">
 					{store.character.map((value, index) => {
 						return (
 							<CardCharacter key={index} people={value}/>
 						)
 					})}
-				</div>
+				 </div> 
 			</div>
 
 			<h3 className="fw-bold">Planets</h3>
-			<div id="carouselPlanets" className="carousel slide carousel-fade">
-				<div className="carousel-inner">
+			<div className="container py-2 overflow-auto">
+				<div className="d-flex flex-row flex-nowrap">
 					{store.galaxy.map((value, index) => {
 						return (
 							<CardPlanets key={index} planets={value} />
@@ -79,8 +79,8 @@ export const Home = () => {
 				</div>
 			</div>
 			<h3 className="fw-bold">Starships</h3>
-			<div id="carouselStarships" className="carousel slide carousel-fade">
-				<div className="carousel-inner">
+			<div className="container py-2 overflow-auto">
+				<div className="d-flex flex-row flex-nowrap">
 					 {store.starships.map((value, index) => {
 						return (
 							<CardNaves key={index} starships={value} />

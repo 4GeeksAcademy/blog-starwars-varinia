@@ -5,4 +5,5 @@ h3{
     display: flex;
     flex-direction: start;
     color: rgb(225, 225, 30);
+    margin-left: 60px;
 }

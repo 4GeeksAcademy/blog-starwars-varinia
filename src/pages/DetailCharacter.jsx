@@ -38,13 +38,13 @@ export const DetailCharacter = () => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title fw-bold">{character.name}</h5>
-                        <p className="card-text">Birth Year:{character.birth_year}</p>
-                        <p className="card-text">{character.eye_color}</p>
-                        <p className="card-text">{character.gender}</p>
-                        <p className="card-text">{character.hair_color}</p>
-                        <p className="card-text">{character.height}</p>
-                        <p className="card-text">{character.skin_color}</p>
+                        <h5 className="card-title fw-bold fs-2">{character.name}</h5>
+                        <p className="card-text"><span className="fw-bold">Birth Year: </span>{character.birth_year}</p>
+                        <p className="card-text"><span className="fw-bold">Eye Color: </span>{character.eye_color}</p>
+                        <p className="card-text"><span className="fw-bold">Gender: </span>{character.gender}</p>
+                        <p className="card-text"><span className="fw-bold">Hair Color: </span>{character.hair_color}</p>
+                        <p className="card-text"><span className="fw-bold">Height: </span>{character.height}</p>
+                        <p className="card-text"><span className="fw-bold">Skin Color: </span>{character.skin_color}</p>
                     </div>
                 </div>
             </div>

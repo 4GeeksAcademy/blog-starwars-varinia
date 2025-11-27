@@ -27,11 +27,10 @@ const toggleFavorite = () => {
     };
 
     return (
-        <div className="card" style={{width: "18rem"}}>
+        <div className="card mx-1" style={{minWidth: "18rem"}}>
              <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/people/${people.uid}.jpg`} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Name:{people.name}</h5>
-                    <p className="card-text">Born:{people.homeworld}</p>
                     <Link to={`/personaje/${people.uid}`} className="btn btn-warning">Learn More</Link>
                     <button className={`btn ${isFav ? "btn btn-outline-warning" : "btn-primary"} ms-2`}onClick={toggleFavorite}>{isFav ? "♥" : "♡"}
                     </button>

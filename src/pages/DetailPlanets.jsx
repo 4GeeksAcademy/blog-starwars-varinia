@@ -35,13 +35,13 @@ export const DetailPlanet = () => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title fw-bold">{planet.name}</h5>
-                        <p className="card-text">{planet.climate}</p>
-                        <p className="card-text">{planet.diameter}</p>
-                        <p className="card-text">{planet.gravity}</p>
-                        <p className="card-text">{planet.orbital_period}</p>
-                        <p className="card-text">{planet.population}</p>
-                        <p className="card-text">{planet.residents}</p>
+                        <h5 className="card-title fw-bold fs-2">{planet.name}</h5>
+                        <p className="card-text"><span className="fw-bold">Climate: </span>{planet.climate}</p>
+                        <p className="card-text"><span className="fw-bold">Diameter: </span>{planet.diameter}</p>
+                        <p className="card-text"><span className="fw-bold">Gravity: </span>{planet.gravity}</p>
+                        <p className="card-text"><span className="fw-bold">Orbital Period: </span>{planet.orbital_period}</p>
+                        <p className="card-text"><span className="fw-bold">Population: </span>{planet.population}</p>
+                        <p className="card-text"><span className="fw-bold">Residents: </span>{planet.residents}</p>
                     </div>
                 </div>
             </div>
